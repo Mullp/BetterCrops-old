@@ -8,7 +8,6 @@ public final class BetterCrops extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println("§bBetterCrops loaded!");
         getServer().getPluginManager().registerEvents(new OnCropClick(), this);
         getServer().getPluginManager().registerEvents(new OnFarmlandTrample(), this);
     }
@@ -16,6 +15,5 @@ public final class BetterCrops extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        System.out.println("§bBetterCrops unloaded!");
     }
 }
