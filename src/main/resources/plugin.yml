@@ -1,0 +1,6 @@
+name: BetterCrops
+version: ${project.version}
+main: me.mullp.bettercrops.BetterCrops
+api-version: 1.16
+authors: [ Mullp ]
+description: Small changes to the way crops work
