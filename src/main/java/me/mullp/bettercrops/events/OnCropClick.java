@@ -15,8 +15,8 @@ import java.util.Collection;
 import java.util.Set;
 
 public class OnCropClick implements Listener {
-    private static final Set<Material> CropTypes = Set.of(Material.WHEAT, Material.CARROTS, Material.POTATOES, Material.BEETROOTS, Material.NETHER_WART);
-    private static final Set<Material> SeedTypes = Set.of(Material.WHEAT_SEEDS, Material.CARROT, Material.POTATO, Material.BEETROOT_SEEDS, Material.NETHER_WART);
+    private static final Set<Material> CropTypes = Set.of(Material.WHEAT, Material.CARROTS, Material.POTATOES, Material.BEETROOTS, Material.NETHER_WART, Material.COCOA);
+    private static final Set<Material> SeedTypes = Set.of(Material.WHEAT_SEEDS, Material.CARROT, Material.POTATO, Material.BEETROOT_SEEDS, Material.NETHER_WART, Material.COCOA_BEANS);
     @EventHandler
     public void onBlockClick(PlayerInteractEvent event) {
         if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
@@ -44,7 +44,8 @@ public class OnCropClick implements Listener {
                             if (makeDrop)
                                 block.getWorld().dropItemNaturally(location, drop);
                         }
-                        block.setType(block.getType());
+                        age.setAge(0);
+                        block.setBlockData(age);
                     }
                 }
             }

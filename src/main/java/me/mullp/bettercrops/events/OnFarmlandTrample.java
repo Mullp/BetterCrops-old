@@ -14,7 +14,7 @@ public class OnFarmlandTrample implements Listener {
     public void onFarmlandTrample(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         Block farmland = event.getClickedBlock();
-        if (farmland != null && farmland.getType() == Material.FARMLAND && event.getAction() == Action.PHYSICAL) {
+        if (farmland != null && farmland.getType().equals(Material.FARMLAND) && event.getAction().equals(Action.PHYSICAL)) {
             if (player.getInventory().getBoots() != null) {
                 if (player.getInventory().getBoots().containsEnchantment(Enchantment.PROTECTION_FALL)) {
                     int rand = (int) (Math.random()*Enchantment.PROTECTION_FALL.getMaxLevel()) + 1;
